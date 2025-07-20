@@ -60,8 +60,8 @@ public class TossCertSession {
             throw new RuntimeException(e.getCause());
         }
     }
-	/*
-    public String decrypt(String encryptedText) {
+    
+	public String decrypt(String encryptedText) {
         try {
             String[] items = encryptedText.split(separatorRegEx);
             if (items.length < 3) {
@@ -90,7 +90,7 @@ public class TossCertSession {
             throw new RuntimeException(e.getCause());
         }
     }
-	*/
+	
     public String serializeSession() {
         return StringUtils.join(separator, new String[]{version, id, algorithm.name(), secretKey, iv});
     }
